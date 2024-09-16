@@ -1,6 +1,5 @@
-// Voeg hier een require toe om de variabelen van het bestand db.conf.php te importeren.
+<?php require '../config/db.conf.php';
 
-<?php
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -13,4 +12,3 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-// This is a useful comment
